@@ -1,7 +1,21 @@
 package CadenaDeCaracteres;
 
+import java.io.PrintStream;
+import java.util.StringTokenizer;
+
 public class main {
 
+	public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_MAGENTA = "\u0033[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_RESET = "\u001B[0m";
+	
+	
 	public static void main(String[] args) {
 		
 		String palabra = "LinKevin";
@@ -31,6 +45,19 @@ public class main {
 		
 		//conversion de Enteros a texto y viceversa
 		//Tokenized
+		//String = 75 + 9 + 63 = 10
+		StringTokenizer st = new StringTokenizer( "75 + 9 + 63 = 10", "\\+" );
+		PrintStream ps = new PrintStream(System.out);
+		
+		ps.println( ANSI_GREEN.concat( String.valueOf(st.countTokens()).concat(ANSI_RESET) ) ); //3
+		
+		while( st.hasMoreTokens() )
+		{
+			ps.println( st.nextToken() );	//el texto en sí como STRING
+		}
+		
+		//ps.println( st.nextElement() );	//objeto representado con STRING
+		int num = Integer.parseInt("9");
 		
 	}
 
