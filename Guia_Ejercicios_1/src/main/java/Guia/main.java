@@ -1,0 +1,40 @@
+package Guia;
+
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.InputStreamReader;
+
+
+public class main {
+
+	public static void main(String[] args) {
+		PrintStream ps = new PrintStream(System.out);		//PrintStream es un administrador de canales de salida
+		PrintStream psErr = new PrintStream(System.err);
+		InputStreamReader isr = new InputStreamReader(System.in);	//Gestor de flujo de datos de entrada
+		
+		int valor_hora = 0;
+		
+		String numero = "";
+		
+		
+		
+		ps.println("Inserte el valor de una hora de trabajo (solo el número)");
+		
+		
+		try {
+			while( (valor_hora = System.in.read()) != 13 ) {
+				numero = numero + (char)valor_hora;
+			}
+		}
+		
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		ps.print(numero);
+
+	}
+
+}
