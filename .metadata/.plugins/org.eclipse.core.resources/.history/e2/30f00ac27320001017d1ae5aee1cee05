@@ -14,20 +14,18 @@ public class main {
 		PrintStream psErr = new PrintStream(System.err);
 		InputStreamReader isr = new InputStreamReader(System.in);	//Gestor de flujo de datos de entrada
 		
-		
-		
 		int valor_hora = 0;
-		int cantidad_horas = 0;
 		
-		String num = "";
-		String num2 = "";
+		String numero = "";
+		
+		
 		
 		ps.println("Inserte el valor de una hora de trabajo (solo el número)");
 		
 		
 		try {
 			while( (valor_hora = System.in.read()) != 13 ) {
-				num = num + (char)valor_hora;
+				numero = numero + (char)valor_hora;
 			}
 		}
 		
@@ -35,27 +33,8 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num);
-		
-		
-		try {
-			while( (cantidad_horas = System.in.read()) != 13 ) {
-				num2 = num2 + (char)cantidad_horas;
-			}
-		}
-		
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		ps.println(num2);
-		
-		
-		
-		
-		
-		
-	}
+		ps.print(numero);
 
+	}
 
 }

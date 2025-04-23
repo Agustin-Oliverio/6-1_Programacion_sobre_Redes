@@ -35,20 +35,18 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num);
+		ps.print(num);
 		
 		
 		try {
-			while( (cantidad_horas = System.in.read()) != 13 ) {
-				num2 = num2 + (char)cantidad_horas;
+			while( (valor_hora = System.in.read()) != 13 ) {
+				num2 = num2 + (char)valor_hora;
 			}
 		}
 		
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		ps.println(num2);
 		
 		
 		

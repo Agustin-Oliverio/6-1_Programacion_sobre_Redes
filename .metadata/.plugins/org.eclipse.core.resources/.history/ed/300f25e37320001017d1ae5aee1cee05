@@ -18,9 +18,7 @@ public class main {
 		
 		int valor_hora = 0;
 		int cantidad_horas = 0;
-		
 		String num = "";
-		String num2 = "";
 		
 		ps.println("Inserte el valor de una hora de trabajo (solo el número)");
 		
@@ -35,20 +33,18 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num);
+		ps.print(numero);
 		
 		
 		try {
-			while( (cantidad_horas = System.in.read()) != 13 ) {
-				num2 = num2 + (char)cantidad_horas;
+			while( (valor_hora = System.in.read()) != 13 ) {
+				numero = numero + (char)valor_hora;
 			}
 		}
 		
 		catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		ps.println(num2);
 		
 		
 		

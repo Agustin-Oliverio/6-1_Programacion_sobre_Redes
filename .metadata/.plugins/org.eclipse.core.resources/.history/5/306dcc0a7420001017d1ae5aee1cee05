@@ -35,7 +35,7 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num);
+		ps.print(num);
 		
 		
 		try {
@@ -48,7 +48,7 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num2);
+		ps.print(num2);
 		
 		
 		
