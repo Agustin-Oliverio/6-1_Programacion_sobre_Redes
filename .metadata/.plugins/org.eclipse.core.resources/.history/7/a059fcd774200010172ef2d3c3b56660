@@ -35,7 +35,7 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num);
+		ps.print(num);
 		
 		
 		try {
@@ -48,10 +48,7 @@ public class main {
 			e.printStackTrace();
 		}
 		
-		ps.println(num2);
-		
-		int salario = Integer.parseInt(num) * Integer.parseInt(num2);
-		ps.println(salario);
+		ps.print(num2);
 		
 		
 		

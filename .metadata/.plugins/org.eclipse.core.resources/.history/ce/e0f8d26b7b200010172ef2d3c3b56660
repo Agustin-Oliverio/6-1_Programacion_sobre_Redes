@@ -50,7 +50,9 @@ public class main {
 		
 		ps.println(num2);
 		
-		int salario = Integer.parseInt(num) * Integer.parseInt(num2);
+		int numC = Integer.parseInt(num);
+		int num2C = Integer.parseInt(num2);
+		int salario = numC * num2C;
 		ps.println(salario);
 		
 		
