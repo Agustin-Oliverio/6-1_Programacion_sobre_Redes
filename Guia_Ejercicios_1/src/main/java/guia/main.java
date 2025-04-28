@@ -33,6 +33,7 @@ public class Main {
             ps.println("14. Mostrar Tabla de Multiplicar de un Número");
             ps.println("15. Indicar si un Número es Primo");
             ps.println("0. Salir");
+            ps.println("");
             ps.print("Ingrese una opción: ");
 
             try {
@@ -54,11 +55,21 @@ public class Main {
                     case 13 -> Ejercicios.calcularApellidoMasLargo(ps, psErr, br);
                     case 14 -> Ejercicios.indicarMultiplos(ps, psErr, br);
                     case 15 -> Ejercicios.indicarSiEsPrimo(ps, psErr, br);
-                    case 0 -> ps.println("Saliendo del programa...");
+                    case 0 -> {
+                        ps.println("Saliendo del programa...");
+                        break;
+                    }
                     default -> ps.println("Opción inválida. Intente nuevamente.");
                 }
+
+                // Si no eligió salir, esperar confirmación antes de mostrar el menú de nuevo
+                if (opcion != 0) {
+                    ps.println("\nPresione ENTER para volver al menú...");
+                    br.readLine();  // Esperar que el usuario apriete ENTER
+                }
+
             } catch (IOException | NumberFormatException e) {
-                psErr.println("Error: " + e.getMessage());
+                psErr.println("El dato ingresado es incorrecto: " + e.getMessage());
             }
         }
     }
