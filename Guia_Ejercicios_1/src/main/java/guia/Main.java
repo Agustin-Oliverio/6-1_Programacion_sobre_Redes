@@ -62,10 +62,9 @@ public class Main {
                     default -> ps.println("Opción inválida. Intente nuevamente.");
                 }
 
-                // Si no eligió salir, esperar confirmación antes de mostrar el menú de nuevo
                 if (opcion != 0) {
                     ps.println("\nPresione ENTER para volver al menú...");
-                    br.readLine();  // Esperar que el usuario apriete ENTER
+                    br.readLine();
                 }
 
             } catch (IOException | NumberFormatException e) {
