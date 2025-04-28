@@ -187,6 +187,12 @@ public class Ejercicios {
                 ps.println("Signo no reconocido. Asegurate de escribirlo correctamente.");
         }
     }
+
+
+    
+    // EJERCICIO 2
+
+
     
     // ordenarAlfabeticamente
     public static void ordenarAlfabeticamente(PrintStream ps, PrintStream psErr, BufferedReader br) throws IOException {
