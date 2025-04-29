@@ -26,6 +26,8 @@
 - g. Dado el signo zodiacal del usuario, la computadora muestra su mes de nacimiento aproximado.
 
 
+
+
 2) Usando SOLO los Métodos de la Class.Reader para la lectura y PrintStream para escritura en consola.
 - a. Dados tres apellidos, la computadora los muestra ordenados alfabéticamente.
 - b. Dados cuatro números reales, la computadora indica cuál es el menor.
