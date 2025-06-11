@@ -10,6 +10,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -136,6 +138,7 @@ public class files {
 				bw.append(":");
 				bw.write('3');
 				bw.newLine();
+				bw.write("Martin puto");
 				bw.flush();		//opcional por que ya es Buffered
 				
 			} catch(IOException e) {
@@ -278,5 +281,86 @@ public class files {
 	 * @author Redes-20
 	 * 
 	 */
+		
+		
+		
+	public void modificarArchivoTemporalLinea(File archivoOriginal, String buscar, String reemplazar) {
+		File archTemp = new File( archivoOriginal.getAbsolutePath() + ".tmp" );
+		
+		try (
+				BufferedReader br = new BufferedReader( new FileReader(archivoOriginal) );
+				BufferedWriter bw = new BufferedWriter( new FileWriter(archTemp) );
+			)
+		{
+			String linea = ""; String EOF = null;
+			while( (linea = br.readLine()) != EOF )
+			{
+				//la edicion necesarioa
+				if(linea.contains(buscar))
+				{
+					linea = linea.replace(buscar, reemplazar);
+				}
+				
+				bw.write(linea);
+				bw.newLine();
+			}
+			
+			if (!archivoOriginal.delete() )
+				throw new IOException("No se pudo borrar el archiv original");
+			
+			if( archTemp.renameTo(archivoOriginal) );
+				throw new IOException("No se pudo renombrar el archivo original");
+				
+		} catch (Exception e) {
+			Logger.getLogger(files.class.getName()).log(Level.WARNING, null, e);
+		}
+		
+	}
+	
+	
+	public void modificarArchivoConLinkedList(File archivoOriginal, String buscar, String reemplazar) {
+		List<String> textoCompleto = new LinkedList<>();
+		
+		try(BufferedReader br = new BufferedReader(new FileReader(archivoOriginal)))
+		
+		{
+			String lineas = ""; String EOF = null;
+			while( (lineas = br.readLine()) != EOF)
+			{
+				//puede tener logica para filtrar que entra al Array o no
+				textoCompleto.add(lineas);
+			}
+		}catch (IOException e) {
+			Logger.getLogger(files.class.getName()).log(Level.WARNING, null, e);
+		}
+		
+		
+		// Modificar lineas que contengan el texto a buscar
+		for( int i = 0 ; i < textoCompleto.size() ; i++ )
+		{
+			//aca logica para modificar lo que necesitamos
+			if(textoCompleto.get(i).contains(buscar))
+				textoCompleto.set(i,  textoCompleto.get(i).replace(buscar, reemplazar));
+				
+		}
+		for(String linea: textoCompleto)
+		{
+			if(linea.contains(buscar))
+				textoCompleto.set(textoCompleto.indexOf(linea), linea.replace(buscar, reemplazar));
+			
+		}
+		
+		// Escribir de nuevo todo el contenido modificado en el archivo
+		try(BufferedWriter bw = new BufferedWriter(new FileWriter(archivoOriginal)))
+		{
+			for(String linea : textoCompleto) {
+				bw.write(linea);
+				bw.newLine();
+			}
+			
+		} catch(IOException e) {
+			Logger.getLogger(files.class.getName()).log(Level.WARNING, null, e);
+		}
+	}
 
 }

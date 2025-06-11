@@ -7,14 +7,15 @@ import java.io.PrintStream;
 public class main {
 
 	public static void main(String[] args) {
-		PrintStream ps;
-		ps = new PrintStream(System.out);
+		PrintStream ps = new PrintStream(System.out);
 		
 		files arch = new files("consorti.txt");
 		
 		arch.crearFileConBuffer(arch.rutaFiles(), "Hola mundo");
 		try {
 			ps.println( arch.LeerFileConBuffer(arch.rutaFiles()) );
+			
+			arch.modificarArchivoTemporalLinea(arch.rutaFiles(), "Martin", "Matheo");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
