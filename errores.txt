@@ -1,2 +1,0 @@
-24 / 0 = ArithmeticException: (No puede dividirse por 0)
-92 / n/a = ArrayIndexOutOfBoundsException: (No hay siguiente número)
