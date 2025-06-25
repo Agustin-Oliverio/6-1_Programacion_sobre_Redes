@@ -146,7 +146,7 @@ public class main {
 					if (i + 1 >= datos.length)
 						throw new ArrayIndexOutOfBoundsException("(No hay siguiente número)");
 
-					int divisor = datos[i + 1];
+					int divisor = datos[i + 1] - 3;
 					if (divisor != 0) {
 						double resultado = (double) dividendo / divisor;
 
