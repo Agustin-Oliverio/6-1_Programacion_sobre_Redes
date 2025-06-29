@@ -1,0 +1,4 @@
+Banana;7;13;56
+Juguete;28;40;156
+Carne;32;47;69
+Caramelo;1;2;741
