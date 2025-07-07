@@ -207,8 +207,9 @@ public class main {
             }
             
             // Ordenar alfabéticamente (excepto la cabecera)
-            String cabecera = registros.get(0);
-            List<String> datosOrdenados = new ArrayList<>(registros.subList(1, registros.size()));
+            String cabecera = "Let \t Color \t\t Animal \t Cosa \t\t Comida";
+            // String cabecera = registros.get(0);
+            List<String> datosOrdenados = new ArrayList<>(registros.subList(0, registros.size()));
             Collections.sort(datosOrdenados);
             
             interfazUsuario.mostrarTablaOrdenada(cabecera, datosOrdenados);
@@ -220,7 +221,7 @@ public class main {
     private static Set<Character> obtenerLetrasUsadas(List<String> registros) {
         Set<Character> letrasUsadas = new HashSet<>();
         
-        for (int i = 1; i < registros.size(); i++) { // Saltar cabecera
+        for (int i = 0; i < registros.size(); i++) { // Saltar cabecera
             String[] partes = registros.get(i).split(";");
             if (partes.length > 0) {
                 letrasUsadas.add(partes[0].charAt(0));
