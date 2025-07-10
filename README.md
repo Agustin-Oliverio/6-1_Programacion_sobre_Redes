@@ -11,6 +11,7 @@
 - Dentro de las ramas de guias estan las carpetas con los ejercicios
 
 *Consigna*
+
 3. Usando SÓLO los Métodos de la Class.Reader para la lectura y PrintStream para escritura en consola, la class PrintWriter para escritura en archivos y para las lecturas de archivos usar Class Buffered correspondiente. (los archivos de texto plano DEBEN crearse desde línea de código NO a mano, al menos que especifique el ejercio.)
 - Crear un archivo de texto (en la carpeta del proyecto) que guarde solo el último dato que el usuario escribe por consola.
 - Crear un archivo de texto (en la carpeta del proyecto) que guarde TODOS los valores NUMERICOS que ingrese el usuario por consola, cada uno en un renglón (puede ingresar otros datos que no sean numero OJO).
@@ -22,7 +23,7 @@
 - Crear un archivo HTML con un lorem en algun lugar (a mano), con un algoritmo lograr abrir el archivo y borrar toda la leyenda de lore
 - Se pide a un usuario mediante un menú cargar una serie de datos de clima, ubicados por la fecha, le permitimos al usuario mostrar todos los datos, le permitimos al usuario poder borrar algún registro (del archivo)
 
-
+/n
 4. Ejercicios de Colecciones  con entrada y salida de datos por consola (se deben usar entradas y salidas a elección del punto 1. o 2.)
 - Una serie de valores numéricos enteros desde el teclado y los guarde en un List de tipo Integer. La lectura de números enteros termina cuando se introduzca el valor -99. Este valor no se guarda en el List. A continuación el programa mostrará por pantalla el número de valores que se han leído, su suma y su media. Por último se mostrarán todos los valores leídos, indicando cuántos de ellos son mayores que la media. Realizar los metodos: leerValores():  calcularSuma()  mostrarResultados()
 - Crea una clase colegio que almacene los apellidos junto a la nacionalidad de los alumnos de un colegio. La clase tendrá los siguientes métodos: addAlumno(String nacionalidad) ->  añade la nacionalidad de un nuevo alumno,  showAll() ->  Muestra las distintas nacionalidades y el número de alumnos que existen por nacionalidad  ,       showNacionalidad(String nacionalidad)  ->  Muestra la nacionalidad y el número de alumnos de esa nacionalidad  ,  cuantos()  ->  Muestra cuántas nacionalidades diferentes existen en el colegio.  ,  borra() ->  Elimina los datos insertados.
